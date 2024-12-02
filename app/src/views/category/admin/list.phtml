@@ -1,0 +1,19 @@
+<h1>Catégories</h1>
+<?php if (!empty($categories)): ?>
+    <ul>
+        <?php foreach ($categories as $category): ?>
+            <li>
+                <ul>
+                    <li>Id: <?php echo $category->getId() ?></li>
+                    <li>Label: <?php echo $category->getLabel() ?></li>
+                    <li>Energy: <?php echo $category->getEnergy() ?></li>
+                    <li>Plate: <?php echo $category->getPlate() ?></li>
+                    <li>Price_day: <?php echo $category->getPrice_day() ?></li>
+                    <li>Price_distance: <?php echo $category->getCategory()->getPrice_distance() ?></li>
+                </ul>
+            </li>
+        <?php endforeach ?>
+    </ul>
+<?php else: ?>
+    <div>Aucune catégorie définie.</div>
+<?php endif ?>

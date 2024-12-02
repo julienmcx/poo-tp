@@ -1,0 +1,21 @@
+<h1>Ouais les voitures ouais</h1>
+
+<?php if (!empty($cars)): ?>
+    <ul>
+        <?php foreach ($cars as $car): ?>
+            <li>
+                <ul>
+                    <li>Id: <?php echo $car->getId() ?></li>
+                    <li>Label: <?php echo $car->getLabel() ?></li>
+                    <li>Energy: <?php echo $car->getEnergy() ?></li>
+                    <li>Plate: <?php echo $car->getPlate() ?></li>
+                    <li>Price_day: <?php echo $car->getPrice_day() ?></li>
+                    <li>Price_distance: <?php echo $car->getCategory()->getPrice_distance() ?></li>
+
+                </ul>
+            </li>
+        <?php endforeach ?>
+    </ul>
+<?php else: ?>
+    <div>Aucune catégorie définie.</div>
+<?php endif ?>
